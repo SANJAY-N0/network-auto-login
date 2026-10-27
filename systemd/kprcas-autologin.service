@@ -1,0 +1,12 @@
+[Unit]
+Description=KPRCAS Wi-Fi Auto-Login and Keep-Alive Daemon
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=%h/scripts/kprcas_autologin.sh
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
